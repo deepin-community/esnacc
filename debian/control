@@ -11,7 +11,6 @@ Build-Depends:
                docbook-xsl,
                unzip,
                xsltproc
-Build-Depends-Indep: libreoffice-writer-nogui
 Standards-Version: 3.9.8
 Vcs-Browser: https://salsa.debian.org/debian/esnacc
 Vcs-Git: https://salsa.debian.org/debian/esnacc.git

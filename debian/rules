@@ -16,10 +16,10 @@ execute_after_dh_auto_build-arch:
 	cd debian && xsltproc --nonet --novalid $(DB2MAN) berdecode.dbk
 
 execute_after_dh_auto_build-indep:
-	cd doc && unzip eSNACCManuals.zip && env HOME=$(CURDIR)/debian/.debhelper/generated/_source/home libreoffice --headless --convert-to pdf Esnacc.doc
+	cd doc && unzip eSNACCManuals.zip
 
 execute_after_dh_auto_install:
 	find debian/tmp -name '*.la' -print -delete
 
 execute_after_dh_auto_clean:
-	rm -f $(CURDIR)/doc/Esnacc.doc $(CURDIR)/doc/EsnaccOriginalMaterial.doc $(CURDIR)/doc/*.pdf
+	rm -f $(CURDIR)/doc/Esnacc.doc $(CURDIR)/doc/EsnaccOriginalMaterial.doc
