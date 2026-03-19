@@ -1,0 +1,6 @@
+missing-prototypes.patch
+clean.patch
+time_t.patch
+gcc-15.patch
+typos.patch
+makefile-deps.patch

@@ -1,0 +1,14 @@
+Author: Andreas Beckmann <anbe@debian.org>
+Description: fix building twice in a row
+
+--- a/redhat/automake.mk
++++ b/redhat/automake.mk
+@@ -10,6 +10,8 @@ RPMBUILD_TOP ?= $(abs_top_builddir)/rpm/
+ EXTRA_DIST += redhat/esnacc.spec.in \
+ 	redhat/esnacc.spec
+ 
++CLEANFILES += redhat/esnacc.spec
++
+ $(srcdir)/redhat/esnacc.spec: redhat/esnacc.spec.in
+ 
+ rpm: dist redhat/esnacc.spec

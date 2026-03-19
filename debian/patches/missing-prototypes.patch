@@ -1,0 +1,13 @@
+Author: Andreas Beckmann <anbe@debian.org>
+Description: fix building with -Werror=implicit-function-declaration
+
+--- a/c-examples/test-lib/test-lib.c
++++ b/c-examples/test-lib/test-lib.c
+@@ -42,6 +42,7 @@
+ #endif
+ #include "asn-incl.h"
+ #include "sbuf.h"
++#include "nibble-alloc.h"
+ 
+ int TestAsnBuffers();
+ int TestAsnTag();

@@ -1,0 +1,8 @@
+---
+include:
+  - https://salsa.debian.org/salsa-ci-team/pipeline/raw/master/recipes/debian.yml
+
+# unreproducible due to 'libreoffice --headless --convert-to pdf Esnacc.doc'
+# https://bugs.debian.org/1065448
+reprotest:
+  allow_failure: true

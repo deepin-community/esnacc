@@ -1,9 +1,214 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: template-repository
-Source: https://github.com/deepin-community/template-repository
+Upstream-Name: eSNACC
+Source: http://esnacc.org/
+Comment: The snacc tool itself is covered by the GNU GPL, while the
+ generated code and the libraries used by generated code are free to
+ use for any purpose, even non-free software.
 
 Files: *
-Copyright: 2023 Tsic404 <liuheng@deepin.org>
+Copyright: 2016, Aaron Conole <aconole@bytheb.org>
+           1991-1993, Michael Sample
+           1992, Michael Sample and the University of British Columbia
+           1997, Dean Povey and the Distributed Systems Technology Centre
+           1991-1993, Karl Lehenbauer and Mark Diekhans
+           2000-2003, Geoffrey Wossum (gwossum@acm.org)
+           1992, University of British Columbia
+           M. Fredette <fredette@bbn.com>
+           Gerald Neufeld <neufeld@cs.ubc.ca>
+           Robert Joop  <rj@rainbow.in-berlin.de>
+           Sebastian Wangnick  <sebastian.wangnick@eurocontrol.be>
+License: GPL-2+
+
+Files: debian/*
+Copyright: 2000, 2001, W. Martin Borgert <debacle@debian.org>
+           2016, Aaron Conole <aconole@bytheb.org>
+           2016, Balint Reczey <balint@balintreczey.hu>
+License: GPL-2+
+
+Files: debian/*.dbk
+Copyright: 2000, 2001, W. Martin Borgert <debacle@debian.org>
+License: GPL-3+
+
+Files: CONDUCT.md
+       CONTRIBUTING.md
+Copyright: 2016, Aaron Conole <aconole@bytheb.org>
+License: GPL-2+
+
+Files: c-lib/inc/mem.h
+ c-lib/src/mem.c
+ compiler/back-ends/c++-gen/gen-any.c
+ compiler/back-ends/c++-gen/gen-code.c
+ compiler/back-ends/c++-gen/gen-vals.c
+ compiler/back-ends/c++-gen/kwd.c
+ compiler/back-ends/c++-gen/rules.c
+ compiler/back-ends/c++-gen/rules.h
+ compiler/back-ends/c++-gen/types.c
+ compiler/back-ends/c-gen/gen-any.c
+ compiler/back-ends/c-gen/gen-code.c
+ compiler/back-ends/c-gen/gen-dec.c
+ compiler/back-ends/c-gen/gen-enc.c
+ compiler/back-ends/c-gen/gen-free.c
+ compiler/back-ends/c-gen/gen-print.c
+ compiler/back-ends/c-gen/gen-type.c
+ compiler/back-ends/c-gen/gen-vals.c
+ compiler/back-ends/c-gen/kwd.c
+ compiler/back-ends/c-gen/rules.c
+ compiler/back-ends/c-gen/rules.h
+ compiler/back-ends/c-gen/type-info.c
+ compiler/back-ends/c-gen/type-info.h
+ compiler/back-ends/c-gen/util.c
+ compiler/back-ends/cond.c
+ compiler/back-ends/idl-gen/gen-any.c
+ compiler/back-ends/idl-gen/gen-vals.c
+ compiler/back-ends/idl-gen/rules.c
+ compiler/back-ends/idl-gen/rules.h
+ compiler/back-ends/idl-gen/types.c
+ compiler/back-ends/str-util.c
+ compiler/back-ends/str-util.h
+ compiler/back-ends/tag-util.c
+ compiler/back-ends/tag-util.h
+ compiler/core/define.c
+ compiler/core/define.h
+ compiler/core/dependency.c
+ compiler/core/do-macros.c
+ compiler/core/err-chk.c
+ compiler/core/exports.c
+ compiler/core/exports.h
+ compiler/core/gen-tbls.c
+ compiler/core/lex-stuff.h
+ compiler/core/lib-types.c
+ compiler/core/lib-types.h
+ compiler/core/link-types.c
+ compiler/core/link-values.c
+ compiler/core/normalize.c
+ compiler/core/oid.c
+ compiler/core/print.c
+ compiler/core/print.h
+ compiler/core/recursive.c
+ compiler/core/snacc-util.c
+ compiler/core/snacc.c
+ compiler/core/val-parser.c
+ tbl-example/example.c
+ tbl-tools/mkchdr/tbl-gen-c-hdr.c
+Copyright: 1991-1992, Michael Sample
+  1993, Michael Sample
+License: GPL-2+
+
+Files: c-lib/inc/asn-any.h
+ c-lib/inc/asn-bits.h
+ c-lib/inc/asn-bool.h
+ c-lib/inc/asn-config.h
+ c-lib/inc/asn-enum.h
+ c-lib/inc/asn-incl.h
+ c-lib/inc/asn-int.h
+ c-lib/inc/asn-len.h
+ c-lib/inc/asn-null.h
+ c-lib/inc/asn-octs.h
+ c-lib/inc/asn-oid.h
+ c-lib/inc/asn-real.h
+ c-lib/inc/asn-tag.h
+ c-lib/inc/exp-buf.h
+ c-lib/inc/min-buf.h
+ c-lib/inc/nibble-alloc.h
+ c-lib/inc/print.h
+ c-lib/inc/sbuf.h
+ c-lib/inc/str-stk.h
+ c-lib/src/asn-any.c
+ c-lib/src/asn-bits.c
+ c-lib/src/asn-bool.c
+ c-lib/src/asn-enum.c
+ c-lib/src/asn-int.c
+ c-lib/src/asn-len.c
+ c-lib/src/asn-null.c
+ c-lib/src/asn-octs.c
+ c-lib/src/asn-oid.c
+ c-lib/src/asn-real.c
+ c-lib/src/asn-tag.c
+ c-lib/src/nibble-alloc.c
+ c-lib/src/print.c
+ c-lib/src/sbuf.c
+ c-lib/src/str-stk.c
+ cxx-lib/inc/asn-config.h
+ cxx-lib/src/asn-any.cpp
+ cxx-lib/src/asn-bits.cpp
+ cxx-lib/src/asn-bool.cpp
+ cxx-lib/src/asn-enum.cpp
+ cxx-lib/src/asn-int.cpp
+ cxx-lib/src/asn-len.cpp
+ cxx-lib/src/asn-null.cpp
+ cxx-lib/src/asn-oid.cpp
+ cxx-lib/src/asn-real.cpp
+ cxx-lib/src/asn-tag.cpp
+ cxx-lib/src/asn-type.cpp
+ cxx-lib/src/print.cpp
+Copyright: 1992, Michael Sample and the University of British Columbia
+License: GPL-2+
+
+Files: c-lib/inc/gen-buf.h
+ c-lib/inc/tbl-dec.h
+ c-lib/inc/tbl-enc.h
+ c-lib/inc/tbl-free.h
+ c-lib/inc/tbl-gen-c-hdr.h
+ c-lib/inc/tbl-incl.h
+ c-lib/inc/tbl-print.h
+ c-lib/inc/tbl-util.h
+ c-lib/src/tbl-dec.c
+ c-lib/src/tbl-enc.c
+ c-lib/src/tbl-free.c
+ c-lib/src/tbl-print.c
+ c-lib/src/tbl-util.c
+ tbl-tools/mkchdr/mkchdr.c
+ tbl-tools/ptbl/pasn1.c
+ tbl-tools/ptbl/ptbl.c
+ tbl-tools/pval/pval.c
+Copyright: 1993, Michael Sample
+License: GPL-2+
+
+Files: c-lib/inc/asn-list.h
+ c-lib/inc/hash.h
+ c-lib/src/asn-list.c
+ cxx-lib/src/hash.cpp
+Copyright: 1992, the University of British Columbia
+License: GPL-2+
+
+Files: compiler/core/meta.c
+ compiler/core/meta.h
+Copyright: 1994-1995, Robert Joop <rj@rainbow.in-berlin.de>
+License: GPL-2+
+
+Files: compiler/core/enc-rules.c
+ compiler/core/enc-rules.h
+Copyright: 1997, Dean Povey and the Distributed Systems Technology Centre
+License: GPL-2+
+
+Files: compiler/back-ends/c-gen/util.h
+ compiler/core/snacc-util.h
+Copyright: 1992, Michael Sample and the University of British Columbia
+License: GPL-2+
+
+Files: c-lib/inc/asn-der.h
+ c-lib/src/asn-der.c
+Copyright: 1997, Dean Povey and the Distributed Systems Technology Centre
+License: GPL-2+
+
+Files: cxx-lib/src/tkAppInit.c
+Copyright: 1991-1993, Karl Lehenbauer and Mark Diekhans
+License: Expat
+
+Files: build-aux/cccl
+Copyright: 2000-2003, Geoffrey Wossum (gwossum@acm.org)
+License: GPL-2+
+
+Files: compiler/back-ends/idl-gen/gen-code.c
+Copyright: 1991-1992, Michael Sample
+  1995, Robert Joop
+License: GPL-2+
+
+Files: c-lib/src/hash.c
+Copyright: 1992, University of British Columbia
+License: GPL-2+
+
+
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -16,7 +221,43 @@ License: GPL-2+
  GNU General Public License for more details.
  .
  You should have received a copy of the GNU General Public License
- along with this program. If not, see <https://www.gnu.org/licenses/>
- .
+ along with this package. If not, see <https://www.gnu.org/licenses/>.
+Comment:
  On Debian systems, the complete text of the GNU General
  Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+License: GPL-3+
+ This package is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this package. If not, see <https://www.gnu.org/licenses/>.
+Comment:
+ On Debian systems, the complete text of the GNU General
+ Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person obtaining a
+ copy of this software and associated documentation files (the "Software"),
+ to deal in the Software without restriction, including without limitation
+ the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ and/or sell copies of the Software, and to permit persons to whom the
+ Software is furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included
+ in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

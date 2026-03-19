@@ -1,0 +1,136 @@
+Author: Andreas Beckmann <anbe@debian.org>
+Description: fix typos and encoding
+
+--- a/c-lib/inc/asn-config.h
++++ b/c-lib/inc/asn-config.h
+@@ -173,7 +173,7 @@ Asn1ErrorHandler Asn1InstallErrorHandler
+ 
+ /*
+  * NOTE: for use with tables, I defined the (slower)
+- *  GenBuf type that is more flexible (à la ISODE and XDR).
++ *  GenBuf type that is more flexible (Ã  la ISODE and XDR).
+  *  This allows the encode/decode libs to support other
+  *  buffer types dynamically instead of having different
+  *  libs for each buffer type.
+--- a/compiler/back-ends/c++-gen/gen-any.c
++++ b/compiler/back-ends/c++-gen/gen-any.c
+@@ -251,7 +251,7 @@ PrintCxxAnyHashInitRoutine PARAMS ((src,
+     modName = Asn1TypeName2CTypeName (m->modId->name);
+ 
+     /* print Any class src file */
+-    fprintf (src,"// this class will automatically intialize the any hash tbl\n");
++    fprintf (src,"// this class will automatically initialize the any hash tbl\n");
+     fprintf (src,"class InitAny%s\n", modName);
+     fprintf (src,"{\n");
+     fprintf (src,"  public:\n");
+--- a/compiler/back-ends/c-gen/gen-dec.c
++++ b/compiler/back-ends/c-gen/gen-dec.c
+@@ -834,7 +834,7 @@ PrintCSetDecodeCode PARAMS ((src, td, pa
+         tagLevel = initialTagLevel+1;
+         if ((e->type == NULL) || (e->type->cTypeRefInfo == NULL))
+         {
+-            fprintf (src, "< ERROR - no c type information - prob unsuported type>\n");
++            fprintf (src, "< ERROR - no c type information - prob unsupported type>\n");
+             continue;
+         }
+ 
+@@ -1164,7 +1164,7 @@ PrintCSeqDecodeCode PARAMS ((src, td, pa
+ 
+         if ((e->type == NULL) || (e->type->cTypeRefInfo == NULL))
+         {
+-            fprintf (src, "< ERROR - no c type information - prob unsuported type>\n");
++            fprintf (src, "< ERROR - no c type information - prob unsupported type>\n");
+             continue;
+         }
+ 
+@@ -1755,7 +1755,7 @@ PrintCChoiceDecodeCode PARAMS ((src, td,
+ 
+         if ((e->type == NULL) || (e->type->cTypeRefInfo == NULL))
+         {
+-            fprintf (src, "< ERROR - no c type information - prob unsuported type>\n");
++            fprintf (src, "< ERROR - no c type information - prob unsupported type>\n");
+             continue;
+         }
+ 
+--- a/compiler/back-ends/idl-gen/gen-any.c
++++ b/compiler/back-ends/idl-gen/gen-any.c
+@@ -157,7 +157,7 @@ PrintIDLAnyHashInitRoutine PARAMS ((idl,
+ 
+ 
+     /* print InitAny class src file */
+-    fprintf (src,"// this class will automatically intialize the any hash tbl\n");
++    fprintf (src,"// this class will automatically initialize the any hash tbl\n");
+     fprintf (src,"class InitAny\n");
+     fprintf (src,"{\n");
+     fprintf (src,"  public:\n");
+--- a/compiler/core/val-parser.c
++++ b/compiler/core/val-parser.c
+@@ -431,7 +431,7 @@ ParseOidValue PARAMS ((mods, m, vd, t, v
+     if (AT_EOF())
+     {
+         PrintErrLoc ((char*)m, (long)vd);
+-        fprintf (errFileG, "ERROR - expecting more data in OBJECT IDENTIFER value\n");
++        fprintf (errFileG, "ERROR - expecting more data in OBJECT IDENTIFIER value\n");
+         FAIL();
+     }
+ 
+@@ -440,7 +440,7 @@ ParseOidValue PARAMS ((mods, m, vd, t, v
+     if (**vStr != '{')
+     {
+         PrintErrLoc ((char*)m, (long)vd);
+-        fprintf (errFileG, "ERROR - OBJECT IDENTIFER values must begin with an \"{\".\n");
++        fprintf (errFileG, "ERROR - OBJECT IDENTIFIER values must begin with an \"{\".\n");
+         FAIL();
+     }
+     else
+--- a/cxx-lib/src/asn-bits.cpp
++++ b/cxx-lib/src/asn-bits.cpp
+@@ -758,7 +758,7 @@ void AsnBits::DecodeWithSizeConstraint(A
+ 	if(decodeSize > iSCUpperBound)
+ 	{
+         delete [] pStr;
+-		throw EXCEPT("String size not withing restricted bounds", RESTRICTED_TYPE_ERROR);
++		throw EXCEPT("String size not within restricted bounds", RESTRICTED_TYPE_ERROR);
+ 	}
+ 
+ 
+--- a/cxx-lib/src/asn-octs.cpp
++++ b/cxx-lib/src/asn-octs.cpp
+@@ -198,7 +198,7 @@ AsnLen AsnOcts::EncodeWithSizeConstraint
+ 	if(size < iSCLowerBound || size > iSCUpperBound)
+ 	{
+         delete [] pStr;
+-		throw EXCEPT("AsnOcts size not withing restricted bounds", RESTRICTED_TYPE_ERROR);
++		throw EXCEPT("AsnOcts size not within restricted bounds", RESTRICTED_TYPE_ERROR);
+ 	}
+ 	
+ 	
+@@ -299,7 +299,7 @@ void AsnOcts::DecodeWithSizeConstraint(A
+ 	if(decodeSize > iSCUpperBound)
+ 	{
+         delete [] pStr;
+-		throw EXCEPT("String size not withing restricted bounds", RESTRICTED_TYPE_ERROR);
++		throw EXCEPT("String size not within restricted bounds", RESTRICTED_TYPE_ERROR);
+ 	}
+ 
+ 
+--- a/cxx-lib/src/asn-stringtype.cpp
++++ b/cxx-lib/src/asn-stringtype.cpp
+@@ -177,7 +177,7 @@ AsnLen AsnString::EncodeWithSizeConstrai
+ 	if(size < iSCLowerBound || size > iSCUpperBound)
+ 	{
+         delete [] pStr;
+-		throw EXCEPT("String size not withing restricted bounds", RESTRICTED_TYPE_ERROR);
++		throw EXCEPT("String size not within restricted bounds", RESTRICTED_TYPE_ERROR);
+ 	}
+ 	
+ 	
+@@ -281,7 +281,7 @@ void AsnString::DecodeWithSizeConstraint
+ 	if(decodeSize > iSCUpperBound)
+ 	{
+         delete [] pStr;
+-		throw EXCEPT("String size not withing restricted bounds", RESTRICTED_TYPE_ERROR);
++		throw EXCEPT("String size not within restricted bounds", RESTRICTED_TYPE_ERROR);
+ 	}
+ 
+ 
