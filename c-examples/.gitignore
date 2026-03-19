@@ -1,0 +1,10 @@
+.dirstamp
+.libs
+.deps
+*.log
+*.trs
+simple/genber
+simple/minbuf
+simple/expbuf
+simple/sbuf
+test-lib/testlib

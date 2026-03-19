@@ -1,0 +1,21 @@
+Description: fix FTBFS with GCC 15
+Author: Andreas Beckmann <anbe@debian.org>
+
+--- a/c-lib/src/asn-UTF8String.c
++++ b/c-lib/src/asn-UTF8String.c
+@@ -6,6 +6,7 @@
+ #include <string.h>
+ #include "asn-incl.h"
+ 
++#if __STDC_VERSION__ < 202311L
+ /* Type Definitions */
+ #ifndef bool
+ 	typedef char bool;	
+@@ -17,6 +18,7 @@
+ #ifndef false
+ 	#define false   0
+ #endif
++#endif
+ 
+ typedef struct
+ {

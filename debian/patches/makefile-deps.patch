@@ -1,0 +1,34 @@
+Author: Andreas Beckmann <anbe@debian.org>
+Description: add missing Makefile dependencies
+
+--- a/cxx-examples/automake.mk
++++ b/cxx-examples/automake.mk
+@@ -1,5 +1,9 @@
+ TESTS += cxx-examples/main
+ 
++BUILT_SOURCES	+= cxx-examples/src/rfc1155-smi.cpp \
++		   cxx-examples/src/rfc1157-snmp.cpp \
++		   cxx-examples/src/autotags.cpp
++
+ check_PROGRAMS += cxx-examples/main
+ 
+ cxx_examples_main_SOURCES = \
+--- a/c-examples/automake.mk
++++ b/c-examples/automake.mk
+@@ -4,6 +4,8 @@ TESTS += c-examples/simple/genber \
+ 	c-examples/simple/sbuf \
+ 	c-examples/test-lib/testlib
+ 
++BUILT_SOURCES	+= asn1specs/p-rec.c
++
+ check_PROGRAMS += c-examples/simple/genber \
+ 	c-examples/simple/minbuf \
+ 	c-examples/simple/expbuf \
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -121,3 +121,5 @@ include cxx-examples/automake.mk
+ # This file is excluded from distribution on releases.
+ # include debian/automake.mk
+ include redhat/automake.mk
++
++$(BUILT_SOURCES): compiler/esnacc

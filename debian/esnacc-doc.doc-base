@@ -1,0 +1,8 @@
+Document: esnacc-doc
+Title: eSNACC 1.7: A High Performance ASN.1 to C/C++/IDL Compiler
+Author: DigitalNet (originally developed by Michael Sample)
+Abstract: This manual describes the Snacc ASN.1 to C/C++ compiler.
+Section: Programming
+
+Format: PDF
+Files: /usr/share/doc/esnacc/Esnacc.pdf.gz

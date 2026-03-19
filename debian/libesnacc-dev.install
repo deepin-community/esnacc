@@ -1,0 +1,9 @@
+usr/include/c-lib/inc
+usr/include/cxx-lib/inc
+usr/include/snacc.h
+usr/lib/*/libcasn1.a
+usr/lib/*/libcasn1.so
+usr/lib/*/libcxxasn1.a
+usr/lib/*/libcxxasn1.so
+usr/lib/*/pkgconfig/libesnacc.pc
+usr/lib/*/pkgconfig/libesnaccxx.pc
